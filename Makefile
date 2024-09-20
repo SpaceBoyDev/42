@@ -17,13 +17,15 @@ SRCS = \
 	ft_memcpy.c \
 	ft_memmove.c \
 	ft_strlcpy.c \
+	ft_strlcat.c \
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS)
+	$(CC) -o $(NAME) $(OBJS) -lbsd
+	make clean
 
 clean:
 	$(RM) $(OBJS)
