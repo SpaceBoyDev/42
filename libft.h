@@ -6,7 +6,7 @@
 /*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:29:51 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/20 16:14:02 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/23 17:58:15 by darmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ void 	*ft_memmove(void *dest, const void *src, size_t n);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size); //TODO: Hacerla :3
+
+int		ft_toupper(int c);
+
+int		ft_tolower(int c);
+
+char	*ft_strchr(const char *s, int c);
 
 #endif
