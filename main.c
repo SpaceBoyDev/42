@@ -6,7 +6,7 @@
 /*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/23 18:09:35 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/23 19:20:34 by darmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,13 +168,31 @@ void	test_strchr()
 {
 	printf("\nChecking strchr...\n");
 	char	str[] = "Hola :3";
-	char	c = 'r';
+	char	c = 'l';
 
-	printf("%c\n", *ft_strchr(str, c));
-	printf("%c\n", *strchr(str, c));
+	printf("%pc\n", ft_strchr(str, c));
+	printf("%pc\n", strchr(str, c));
+}
 
-	if (ft_strchr(str, c) == 0 && strchr(str, c) == 0)
-		printf("NULL");
+void	test_strrchr()
+{
+	printf("\nChecking strrchr...\n");
+	char	str[] = "Holalalo :3";
+	char	c = ':';
+
+	printf("%pc\n", ft_strrchr(str, c));
+	printf("%pc\n", strrchr(str, c));
+}
+
+void	test_strncmp()
+{
+	printf("\nChecking strncmp...\n");
+	char	str1[] = "Hello World :3";
+	char	str2[] = "Hell0 World :3";
+	int		len = 0;
+
+	printf("%d\n", ft_strncmp(str1, str2, len));
+	printf("%d\n", strncmp(str1, str2, len));
 }
 
 int	main(void)
@@ -185,8 +203,10 @@ int	main(void)
 	// test_memmove();
 	// test_strlcpy();
 	// test_strlcat();
-	test_toupper();
-	test_tolower();
+	// test_toupper();
+	// test_tolower();
 	test_strchr();
+	test_strrchr();
+	test_strncmp();
 	return (0);
 }

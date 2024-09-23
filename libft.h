@@ -6,7 +6,7 @@
 /*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:29:51 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/23 17:58:15 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/23 19:14:40 by darmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,9 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 char	*ft_strchr(const char *s, int c);
+
+char	*ft_strrchr(const char *s, int c);
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
