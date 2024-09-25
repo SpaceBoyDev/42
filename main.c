@@ -6,7 +6,7 @@
 /*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/25 18:12:39 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/25 19:30:34 by darmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -225,6 +225,11 @@ void	test_atoi()
 
 	printf("%d\n", ft_atoi(str));
 	printf("%d\n", atoi(str));
+}
+
+void	test_calloc()
+{
+	
 }
 
 int	main(void)
