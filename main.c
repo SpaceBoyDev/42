@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
+/*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/24 21:50:57 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/25 18:12:39 by darmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <strings.h>
 #include <stdio.h>
 #include <bsd/string.h>
+#include <stdlib.h>
 
 #include "libft.h"
 
@@ -217,19 +218,17 @@ void	test_memcmp()
 	printf("%d\n", memcmp(str1, str2, n));
 }
 
+void	test_atoi()
+{
+	printf("\nChecking atoi...\n");
+	char	str[] = "   709";
+
+	printf("%d\n", ft_atoi(str));
+	printf("%d\n", atoi(str));
+}
+
 int	main(void)
 {
-	// test_memset();
-	// test_bzero();
-	// test_memcpy();
-	// test_memmove();
-	// test_strlcpy();
-	// test_strlcat();
-	// test_toupper();
-	// test_tolower();
-	// test_strchr();
-	// test_strrchr();
-	// test_strncmp();
-	// test_memchr();
+	test_atoi();
 	return (0);
 }
