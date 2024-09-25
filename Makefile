@@ -1,6 +1,12 @@
 NAME = libft.a
 
-CFLAGS += -Wall -Wextra #-Werror Descomentar antes de entrega
+CC = gcc #TODO: Utilizar cc
+
+AR = ar
+
+ARFLAGS = -rc
+
+CFLAGS += -Wall -Wextra -Werror #Descomentar antes de entrega
 
 RM = rm -f
 
@@ -23,14 +29,18 @@ SRCS = \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_strncmp.c \
+	ft_memchr.c \
+	ft_memcmp.c \
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
+cc: $(OBJS)
+	$(CC) $(CCFLAGS) -o $(NAME) $(OBJS) -lbsd
+
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) -lbsd
-	make clean
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
@@ -39,3 +49,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

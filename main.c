@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/23 19:20:34 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/24 21:50:57 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,12 +187,34 @@ void	test_strrchr()
 void	test_strncmp()
 {
 	printf("\nChecking strncmp...\n");
-	char	str1[] = "Hello World :3";
-	char	str2[] = "Hell0 World :3";
-	int		len = 0;
+	char	str1[] = "test\200";
+	char	str2[] = "test\0";
+	int		len = 6;
 
 	printf("%d\n", ft_strncmp(str1, str2, len));
 	printf("%d\n", strncmp(str1, str2, len));
+}
+
+void	test_memchr()
+{
+	printf("\nChecking memchr...\n");
+	int	arr[] = {1, 2, 3, 4};
+	int	c = 2;
+	int	n = 5;
+
+	printf("%pc\n", ft_memchr(arr, c, n));
+	printf("%pc\n", memchr(arr, c, n));
+}
+
+void	test_memcmp()
+{
+	printf("\nChecking memcmp...\n");
+	char	str1[] = "Hola :3";
+	char	str2[] = "Hola :3";
+	int		n = 5;
+
+	printf("%d\n", ft_memcmp(str1, str2, n));
+	printf("%d\n", memcmp(str1, str2, n));
 }
 
 int	main(void)
@@ -205,8 +227,9 @@ int	main(void)
 	// test_strlcat();
 	// test_toupper();
 	// test_tolower();
-	test_strchr();
-	test_strrchr();
-	test_strncmp();
+	// test_strchr();
+	// test_strrchr();
+	// test_strncmp();
+	// test_memchr();
 	return (0);
 }
