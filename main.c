@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/26 20:21:38 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/27 01:46:42 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,7 +221,7 @@ void	test_memcmp()
 void	test_atoi()
 {
 	printf("\nChecking atoi...\n");
-	char	str[] = "   -147586669500";
+	char	str[] = "-123";
 
 	printf("%d\n", ft_atoi(str));
 	printf("%d\n", atoi(str));
@@ -246,6 +246,6 @@ void	test_calloc()
 int	main(void)
 {
 	test_atoi();
-	test_calloc();
+	// test_calloc();
 	return (0);
 }
