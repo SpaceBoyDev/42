@@ -6,7 +6,7 @@
 /*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/25 19:30:34 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/26 20:06:56 by darmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,7 +221,7 @@ void	test_memcmp()
 void	test_atoi()
 {
 	printf("\nChecking atoi...\n");
-	char	str[] = "   709";
+	char	str[] = "   -147586669500";
 
 	printf("%d\n", ft_atoi(str));
 	printf("%d\n", atoi(str));
@@ -229,11 +229,23 @@ void	test_atoi()
 
 void	test_calloc()
 {
-	
+	printf("\nChecking calloc...\n");
+	char		*ptr;
+	int		num = 10;
+
+	ptr = ft_calloc(6, sizeof(char));
+	// ptr = calloc(6, sizeof(char));
+	for (size_t i = 0; i < (size_t)num; i++)
+	{
+		if (ptr[i] == '\0')
+			printf("%ld, ", i);
+	}
+
 }
 
 int	main(void)
 {
 	test_atoi();
+	test_calloc();
 	return (0);
 }
