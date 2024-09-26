@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/25 19:30:34 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/26 14:40:02 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,7 +221,7 @@ void	test_memcmp()
 void	test_atoi()
 {
 	printf("\nChecking atoi...\n");
-	char	str[] = "   709";
+	char	str[] = "  707854734760609607";
 
 	printf("%d\n", ft_atoi(str));
 	printf("%d\n", atoi(str));
