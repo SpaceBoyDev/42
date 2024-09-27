@@ -6,7 +6,7 @@
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/27 17:53:50 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/27 19:26:30 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -294,8 +294,22 @@ void	test_strjoin()
 		printf(":3 NULL creo\n");
 }
 
+void	test_strtrim()
+{
+	printf("\nChecking strtrim...\n");
+	char			str[] = "Hola";
+	char			set[] = "laoH";
+	char			*trim;
+	
+	trim = ft_strtrim(str, set);
+	printf("%s\n", trim);
+	for (size_t i = 0; i < ft_strlen(trim); i++)
+		printf("%c, ", trim[i]);
+	printf("\n");
+}
+
 int	main(void)
 {
-	test_strjoin();
+	test_strtrim();
 	return (0);
 }
