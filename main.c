@@ -6,7 +6,7 @@
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/27 01:46:42 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/27 17:19:58 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,9 +243,30 @@ void	test_calloc()
 
 }
 
+void	test_strdup()
+{
+	printf("\nChecking strdup...\n");
+	char	str[] = "Hola Mundo   4";
+	char	*cpy1;
+	char	*cpy2;
+
+	cpy1 = ft_strdup(str);
+	cpy2 = strdup(str);
+	printf("%s\n", cpy1);
+	printf("%s\n\n", cpy2);
+	for (size_t i = 0; i < strlen(str); i++)
+	{
+		printf("%pc, %ld\n", &cpy1[i], i);
+	}
+	printf("\n\n");
+	for (size_t i = 0; i < strlen(str); i++)
+	{
+		printf("%pc, %ld\n,", &cpy2[i], i);
+	}
+}
+
 int	main(void)
 {
-	test_atoi();
-	// test_calloc();
+	
 	return (0);
 }
