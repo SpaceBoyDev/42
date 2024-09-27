@@ -35,6 +35,8 @@ SRCS = \
 	ft_atoi.c \
 	ft_calloc.c \
 	ft_strdup.c \
+	ft_substr.c \
+	ft_strjoin.c \
 
 OBJS = $(SRCS:.c=.o)
 

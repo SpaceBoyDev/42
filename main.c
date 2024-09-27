@@ -6,7 +6,7 @@
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/27 17:19:58 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/27 17:53:50 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -265,8 +265,37 @@ void	test_strdup()
 	}
 }
 
+void	test_substr()
+{
+	printf("\nChecking substr...\n");
+	char			str[] = "Hola mun";
+	char			*cpy1;
+	unsigned int	start = 0;
+	size_t			len = 6;
+	
+	cpy1 = ft_substr(str, start, len);
+	if (cpy1)
+		printf("%s\n", cpy1);
+	else
+		printf(":3 NULL creo\n");
+}
+
+void	test_strjoin()
+{
+	printf("\nChecking substr...\n");
+	char			str1[] = "sdnuifrshjnuif    ";
+	char			str2[] = " 333 33";
+	char			*cat;
+	
+	cat = ft_strjoin(str1, str2);
+	if (cat)
+		printf("%s\n", cat);
+	else
+		printf(":3 NULL creo\n");
+}
+
 int	main(void)
 {
-	
+	test_strjoin();
 	return (0);
 }
