@@ -48,20 +48,34 @@ SRCS = \
 	ft_putnbr_fd.c
 
 BONUS = \
-	
+	main_bonus.c \
+	ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstadd_back_bonus.c \
+	ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c \
+	ft_lstiter_bonus.c \
+	ft_lstmap_bonus.c
 
 OBJS = $(SRCS:.c=.o)
+
+BNS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
 cc: $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -lbsd
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
+bonus: $(BNS)
+	$(AR) $(ARFLAGS) $(NAME) $(BNS)
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BNS)
 
 fclean: clean
 	$(RM) $(NAME)

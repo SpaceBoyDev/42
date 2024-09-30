@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 19:08:13 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/30 20:50:32 by dario            ###   ########.fr       */
+/*   Created: 2024/09/30 20:15:35 by dario             #+#    #+#             */
+/*   Updated: 2024/09/30 20:25:54 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (c >= ' ' && c <= '~')
-		return (16384);
-	return (0);
+	t_list	*aux;
+
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		aux = *lst;
+		*lst = (*lst)->next;
+		del(aux->content);
+		free(aux);
+	}
+	*lst = NULL;
 }

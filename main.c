@@ -6,7 +6,7 @@
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/30 17:42:32 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/30 19:37:46 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <string.h>
 #include <strings.h>
 #include <stdio.h>
-#include <bsd/string.h>
 #include <stdlib.h>
 
 #include "libft.h"
@@ -111,7 +110,7 @@ void	test_strlcpy()
 	char	src[] = "World";
 
 	printf("\n%zu\n", ft_strlcpy(arr1, src, 10));
-	printf("\n%zu\n", strlcpy(arr2, src, 10));
+	// printf("\n%zu\n", strlcpy(arr2, src, 10));
 	for (size_t i = 0; i < strlen(arr1); i++)
 	{
 		printf("%c ", arr1[i]);
@@ -133,7 +132,7 @@ void	test_strlcat()
 	char	src[] = "Bye :3";
 
 	printf("\n%zu\n", ft_strlcat(arr1, src, 2));
-	printf("\n%zu\n", strlcat(arr2, src, 2));
+	// printf("\n%zu\n", strlcat(arr2, src, 2));
 	for (size_t i = 0; i < strlen(arr1); i++)
 	{
 		printf("%c ", arr1[i]);
@@ -272,7 +271,7 @@ void	test_substr()
 	char			*cpy1;
 	unsigned int	start = 0;
 	size_t			len = 6;
-	
+
 	cpy1 = ft_substr(str, start, len);
 	if (cpy1)
 		printf("%s\n", cpy1);
@@ -286,7 +285,7 @@ void	test_strjoin()
 	char			str1[] = "sdnuifrshjnuif    ";
 	char			str2[] = " 333 33";
 	char			*cat;
-	
+
 	cat = ft_strjoin(str1, str2);
 	if (cat)
 		printf("%s\n", cat);
@@ -300,7 +299,7 @@ void	test_strtrim()
 	char			str[] = "Hola";
 	char			set[] = "laoH";
 	char			*trim;
-	
+
 	trim = ft_strtrim(str, set);
 	printf("%s\n", trim);
 	for (size_t i = 0; i < ft_strlen(trim); i++)
