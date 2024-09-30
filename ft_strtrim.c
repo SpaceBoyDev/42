@@ -6,13 +6,13 @@
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:04:37 by dario             #+#    #+#             */
-/*   Updated: 2024/09/27 19:35:34 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/27 20:05:37 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_findchars(char const c, char const *find)
+static int	ft_findchars(char const c, char const *find)
 {
 	while (*find)
 	{

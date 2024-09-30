@@ -6,7 +6,7 @@
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/27 19:26:30 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/30 16:42:55 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -308,8 +308,29 @@ void	test_strtrim()
 	printf("\n");
 }
 
+void	test_split()
+{
+	printf("\nChecking strtrim...\n");
+	char			str[] = "HolaHolaHola";
+	char			c = 'a';
+	char			**split;
+	split = ft_split(str, c);
+	for (size_t i = 0; i < 4; i++)
+	{
+		printf("%s, ", split[i]);
+	}
+	printf("\n");
+}
+
+void	test_itoa()
+{
+	printf("\nChecking itoa...\n");
+
+	printf("%s\n", ft_itoa(-25303460));
+}
+
 int	main(void)
 {
-	test_strtrim();
+	test_itoa();
 	return (0);
 }
