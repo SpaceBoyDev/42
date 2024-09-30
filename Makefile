@@ -1,12 +1,12 @@
 NAME = libft.a
 
-CC = gcc #TODO: Utilizar cc
+CC = cc
 
 AR = ar
 
 ARFLAGS = -rc
 
-CFLAGS += -Wall -Wextra -Werror #Descomentar antes de entrega
+CFLAGS += -Wall -Wextra -Werror
 
 RM = rm -f
 
@@ -42,13 +42,18 @@ SRCS = \
 	ft_itoa.c \
 	ft_strmapi.c \
 	ft_striteri.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c
+
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 cc: $(OBJS)
-	$(CC) $(CCFLAGS) -o $(NAME) $(OBJS) -lbsd
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -lbsd
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)

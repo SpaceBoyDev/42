@@ -6,7 +6,7 @@
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:06:52 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/30 16:42:55 by dario            ###   ########.fr       */
+/*   Updated: 2024/09/30 17:42:32 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -329,8 +329,18 @@ void	test_itoa()
 	printf("%s\n", ft_itoa(-25303460));
 }
 
+void	test_putnbr_fd()
+{
+	printf("\nChecking putnbr_fd...\n");
+	int n = -5;
+
+	ft_putnbr_fd(n, 1);
+	printf("\n");
+}
+
 int	main(void)
 {
-	test_itoa();
+	test_putnbr_fd();
+	isprint('c');
 	return (0);
 }
