@@ -11,7 +11,6 @@ CFLAGS += -Wall -Wextra -Werror
 RM = rm -f
 
 SRCS = \
-	main.c \
 	ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -48,7 +47,6 @@ SRCS = \
 	ft_putnbr_fd.c
 
 BONUS = \
-	main_bonus.c \
 	ft_lstnew_bonus.c \
 	ft_lstadd_front_bonus.c \
 	ft_lstsize_bonus.c \
@@ -64,9 +62,6 @@ OBJS = $(SRCS:.c=.o)
 BNS = $(BONUS:.c=.o)
 
 all: $(NAME)
-
-cc: $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
