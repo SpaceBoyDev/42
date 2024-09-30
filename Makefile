@@ -47,6 +47,8 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
+BONUS = \
+	
 
 OBJS = $(SRCS:.c=.o)
 
