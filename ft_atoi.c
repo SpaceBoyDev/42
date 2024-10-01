@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: darmarti <darmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:03:27 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/26 20:21:24 by darmarti         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:44:27 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,15 @@ int	ft_atoi(const char *nptr)
 		++nptr;
 	if (*nptr == '-')
 	{
+		if (!ft_isdigit(*(nptr + 1)))
+			return (0);
 		negative = -1;
 		++nptr;
 	}
-	if (*nptr == '+')
+	if (*nptr == '+' && ft_isdigit(*(nptr + 1)))
 		++nptr;
+	else if (*nptr == '+' && !ft_isdigit(*(nptr + 1)))
+		return (0);
 	while (ft_isdigit(*nptr))
 	{
 		num = (num * 10) + ((int)*nptr - '0');
@@ -35,27 +39,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (num * negative);
 }
-
-	// int	pos;
-	// int	total;
-	// int	sing;
-
-	// total = 0;
-	// sing = 1;
-	// pos = 0;
-	// while (str[pos] == ' ' || (str[pos] >= 9 && str[pos] <= 13))
-	// 	pos++;
-	// if (str[pos] == '+' || str[pos] == '-')
-	// {
-	// 	if (str[pos] == '+')
-	// 		sing = 1;
-	// 	else
-	// 		sing = -1;
-	// 	pos++;
-	// }
-	// while (str[pos] >= '0' && str[pos] <= '9')
-	// {
-	// 	total = total * 10 + (str[pos] - '0');
-	// 	pos++;
-	// }
-	// return (total * sing);

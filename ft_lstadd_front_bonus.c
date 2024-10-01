@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dario <dario@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 19:08:13 by darmarti          #+#    #+#             */
-/*   Updated: 2024/09/30 20:50:32 by dario            ###   ########.fr       */
+/*   Created: 2024/09/30 19:43:11 by dario             #+#    #+#             */
+/*   Updated: 2024/09/30 19:46:10 by dario            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c >= ' ' && c <= '~')
-		return (16384);
-	return (0);
+	if (new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
