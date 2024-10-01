@@ -6,7 +6,7 @@ AR = ar
 
 ARFLAGS = -rc
 
-CFLAGS += -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
@@ -66,8 +66,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-bonus: $(BNS)
-	$(AR) $(ARFLAGS) $(NAME) $(BNS)
+%.o: %.c
+	$(CC) $(CFLAGS) $< -o $@ -c
+
+bonus:
+	make SRCS="$(BONUS)"
 
 clean:
 	$(RM) $(OBJS) $(BNS)
@@ -78,3 +81,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
+.DEFAULT: all
