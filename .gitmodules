@@ -1,9 +1,9 @@
 [submodule "libft"]
-	path = libft
+	path = m0/libft
 	url = https://github.com/SpaceBoyDev/libft.git
 [submodule "printf"]
-	path = printf
+	path = m1/printf
 	url = https://github.com/SpaceBoyDev/printf.git
 [submodule "get_next_line"]
-	path = get_next_line
+	path = m1/get_next_line
 	url = https://github.com/SpaceBoyDev/get_next_line.git
