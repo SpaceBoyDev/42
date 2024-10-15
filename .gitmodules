@@ -5,3 +5,6 @@
 [submodule "printf"]
 	path = printf
 	url = https://github.com/SpaceBoyDev/printf.git
+[submodule "get_next_line"]
+	path = get_next_line
+	url = https://github.com/SpaceBoyDev/get_next_line.git
