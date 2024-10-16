@@ -1,6 +1,3 @@
-[submodule "m0/libft"]
-	path = m0/libft
-	url = https://github.com/SpaceBoyDev/libft.git
 [submodule "get_next_line"]
 	path = get_next_line
 	url = https://github.com/SpaceBoyDev/get_next_line.git
