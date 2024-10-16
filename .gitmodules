@@ -4,3 +4,6 @@
 [submodule "m1/printf"]
 	path = m1/printf
 	url = https://github.com/SpaceBoyDev/printf.git
+[submodule "m0/libft"]
+	path = m0/libft
+	url = https://github.com/SpaceBoyDev/libft.git
