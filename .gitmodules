@@ -7,3 +7,12 @@
 [submodule "m1/get_next_line"]
 	path = m1/get_next_line
 	url = https://github.com/SpaceBoyDev/get_next_line.git
+[submodule "m2/so-long"]
+	path = m2/so-long
+	url = git@github.com:SpaceBoyDev/so-long.git
+[submodule "m2/push_swap"]
+	path = m2/push_swap
+	url = git@github.com:SpaceBoyDev/push_swap.git
+[submodule "m2/minitalk"]
+	path = m2/minitalk
+	url = git@github.com:SpaceBoyDev/minitalk.git
