@@ -16,3 +16,9 @@
 [submodule "m2/minitalk"]
 	path = m2/minitalk
 	url = git@github.com:SpaceBoyDev/minitalk.git
+[submodule "m3/minishell"]
+	path = m3/minishell
+	url = https://github.com/SpaceBoyDev/minishell.git
+[submodule "m3/philosophers"]
+	path = m3/philosophers
+	url = https://github.com/SpaceBoyDev/philosophers.git
