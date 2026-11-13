@@ -22,3 +22,12 @@
 [submodule "m3/philosophers"]
 	path = m3/philosophers
 	url = https://github.com/SpaceBoyDev/philosophers.git
+[submodule "m4/cppmodules"]
+	path = m4/cppmodules
+	url = https://github.com/SpaceBoyDev/cppmodules.git
+[submodule "m4/miniRT"]
+	path = m4/miniRT
+	url = https://github.com/SpaceBoyDev/miniRT.git
+[submodule "m5/inception"]
+	path = m5/inception
+	url = https://github.com/SpaceBoyDev/inception.git
